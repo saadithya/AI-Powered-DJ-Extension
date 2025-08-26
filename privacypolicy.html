@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - AI-Powered DJ Extension</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fff; color: #222; }
+    header { background: #00e5ff; padding: 20px; text-align: center; color: #000; }
+    main { padding: 20px; max-width: 900px; margin: auto; }
+    h2 { color: #00a0b0; margin-top: 1.5em; }
+    a { color: #00a0b0; text-decoration: none; }
+    footer { background: #f1f1f1; text-align: center; padding: 15px; margin-top: 40px; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>AI-Powered DJ Extension</p>
+  </header>
+
+  <main>
+    <p><strong>Effective Date:</strong> <span id="date"></span></p>
+
+    <h2>1. Information We Collect</h2>
+    <p>
+      The AI-Powered DJ Extension does <strong>not collect personally identifiable information</strong>. 
+      All settings, presets, and preferences are stored locally on your device using Chrome’s <code>storage.local</code>.
+    </p>
+
+    <h2>2. Sensitive Data</h2>
+    <p>
+      The extension does not access or store sensitive data such as financial, health, government ID, or authentication information.
+    </p>
+
+    <h2>3. AI Integration</h2>
+    <p>
+      If you choose to connect to a third-party AI provider (such as OpenAI, Claude, or Gemini), 
+      your prompts will be sent directly to that provider. API keys are stored locally on your device and never shared with us. 
+      You are responsible for complying with the chosen provider’s privacy policy and terms of service.
+    </p>
+
+    <h2>4. Permissions</h2>
+    <p>
+      The extension uses limited permissions:
+    </p>
+    <ul>
+      <li><strong>activeTab</strong> – to interact with the current tab’s audio</li>
+      <li><strong>storage</strong> – to save settings and presets locally</li>
+      <li><strong>scripting</strong> – to inject audio processing scripts</li>
+      <li><strong>host_permissions</strong> – to enable audio enhancements on supported sites (YouTube, Spotify, SoundCloud)</li>
+    </ul>
+
+    <h2>5. Data Sharing</h2>
+    <p>
+      We do not sell, rent, or share your data. Any optional integration with third-party AI providers is user-initiated 
+      and under your direct control.
+    </p>
+
+    <h2>6. Contact</h2>
+    <p>
+      For questions about this privacy policy, you may contact us at:<br />
+      📩 <a href="mailto:sujith81159@gmail.com">sujith81159@gmail.com</a>
+    </p>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> AI-Powered DJ Extension. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('date').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
