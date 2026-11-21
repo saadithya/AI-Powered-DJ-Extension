@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - AI-Powered DJ Extension</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fff; color: #222; }
-    header { background: #00e5ff; padding: 20px; text-align: center; color: #000; }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; line-height: 1.65; background: #fff; color: #222; }
+    header { background: #00e5ff; padding: 22px 20px; text-align: center; color: #000; }
+    header h1 { margin: 0 0 6px; font-size: 1.7rem; }
+    header p { margin: 0; font-size: 0.95rem; }
     main { padding: 20px; max-width: 900px; margin: auto; }
-    h2 { color: #00a0b0; margin-top: 1.5em; }
+    h2 { color: #00a0b0; margin-top: 1.9em; font-size: 1.2rem; border-bottom: 1px solid #e6e6e6; padding-bottom: 6px; }
+    h3 { font-size: 1rem; margin-bottom: 4px; }
     a { color: #00a0b0; text-decoration: none; }
-    footer { background: #f1f1f1; text-align: center; padding: 15px; margin-top: 40px; font-size: 0.9rem; }
+    a:hover { text-decoration: underline; }
+    code { background: #f4f6f7; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.93rem; }
+    th, td { border: 1px solid #dcdcdc; padding: 9px 10px; text-align: left; vertical-align: top; }
+    th { background: #f4f6f7; }
+    .summary { background: #f4fdfe; border-left: 4px solid #00e5ff; padding: 14px 16px; margin: 20px 0; }
+    .summary p { margin: 0; }
+    .note { background: #fffbe6; border-left: 4px solid #f0c419; padding: 12px 16px; margin: 16px 0; font-size: 0.95rem; }
+    footer { background: #f1f1f1; text-align: center; padding: 16px; margin-top: 44px; font-size: 0.88rem; color: #444; }
   </style>
 </head>
 <body>
@@ -20,56 +33,262 @@
   </header>
 
   <main>
-    <p><strong>Effective Date:</strong> <span id="date"></span></p>
+    <p><strong>Effective date:</strong> November 21, 2026<br />
+       <strong>Last updated:</strong> November 21, 2026</p>
 
-    <h2>1. Information We Collect</h2>
+    <div class="summary">
+      <p><strong>In short:</strong> the extension has no server and no accounts. Your audio is processed
+      inside your browser and is never recorded, stored, or uploaded. Your settings, presets, API keys,
+      and license key are saved only on your own device. Data leaves the browser in exactly two
+      situations, both started by you: an AI command you send to the provider you selected, and a
+      Premium license check with Gumroad.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
     <p>
-      The AI-Powered DJ Extension does <strong>not collect personally identifiable information</strong>. 
-      All settings, presets, and preferences are stored locally on your device using Chrome’s <code>storage.local</code>.
+      The AI-Powered DJ Extension is a browser extension that adds DJ-style audio controls — volume,
+      equalizer, effects, turntable speed, sample pads, visual effects, and an optional AI command
+      assistant — to videos on YouTube watch pages.
+    </p>
+    <p>
+      "We" refers to the developer of the extension. We do not operate any server, backend, database,
+      or user account system. There is no sign-up, login, or profile.
     </p>
 
-    <h2>2. Sensitive Data</h2>
+    <h2>2. Supported Sites</h2>
     <p>
-      The extension does not access or store sensitive data such as financial, health, government ID, or authentication information.
+      The extension runs only on YouTube video pages (<code>youtube.com</code>,
+      <code>www.youtube.com</code>, <code>m.youtube.com</code> — paths containing <code>/watch</code>).
+      It does not run on, and is not designed for, any other site. Spotify and SoundCloud are not
+      supported in the current version.
     </p>
 
-    <h2>3. AI Integration</h2>
+    <h2>3. Information Stored on Your Device</h2>
     <p>
-      If you choose to connect to a third-party AI provider (such as OpenAI, Claude, or Gemini), 
-      your prompts will be sent directly to that provider. API keys are stored locally on your device and never shared with us. 
-      You are responsible for complying with the chosen provider’s privacy policy and terms of service.
-    </p>
-
-    <h2>4. Permissions</h2>
-    <p>
-      The extension uses limited permissions:
+      Everything below is written to Chrome's local extension storage
+      (<code>chrome.storage.local</code>) on your own computer. It is not synced to your Google account
+      and is not transmitted to us.
     </p>
     <ul>
-      <li><strong>activeTab</strong> – to interact with the current tab’s audio</li>
-      <li><strong>storage</strong> – to save settings and presets locally</li>
-      <li><strong>host_permissions</strong> – to enable audio enhancements on supported sites (YouTube, Spotify, SoundCloud)</li>
+      <li><strong>Audio settings and presets</strong> — volume, EQ, filter, effect values, turntable/disc
+          mode, launchpad and visual-effect preferences, and any custom presets you create.</li>
+      <li><strong>AI settings</strong> — which provider you selected (OpenAI, Anthropic, or Google), the
+          on/off state of the AI assistant, and the API key(s) you entered.</li>
+      <li><strong>Premium data</strong> — the Gumroad license key you entered, a Premium on/off flag, and
+          the timestamp when your free AI trial started.</li>
     </ul>
-
-    <h2>5. Data Sharing</h2>
     <p>
-      We do not sell, rent, or share your data. Any optional integration with third-party AI providers is user-initiated 
-      and under your direct control.
+      We cannot read this data. It lives inside your browser profile and is removed when you uninstall
+      the extension.
     </p>
 
-    <h2>6. Contact</h2>
+    <div class="note">
+      <strong>Please note:</strong> API keys and the license key are stored as plain text in Chrome's
+      local extension storage. Chrome does not encrypt this storage. Anyone with access to your computer
+      or browser profile could read those values. Use a restricted API key with a spending limit, and do
+      not reuse a key you rely on elsewhere.
+    </div>
+
+    <h2>4. Audio Processing</h2>
     <p>
-      For questions about this privacy policy, you may contact us at:<br />
+      All audio manipulation (volume, equalizer, filters, effects, tempo/turntable changes, and sample
+      playback) happens locally in your browser using the Web Audio API, applied to the video that is
+      already playing on the page.
+    </p>
+    <ul>
+      <li>The extension does <strong>not</strong> record audio.</li>
+      <li>It does <strong>not</strong> store audio or save it to disk.</li>
+      <li>It does <strong>not</strong> upload audio anywhere.</li>
+      <li>It does <strong>not</strong> use your microphone, camera, screen, or tab-capture APIs.</li>
+      <li>It does <strong>not</strong> download or copy the video.</li>
+    </ul>
+    <p>
+      The bundled vocal samples and impulse responses are files shipped inside the extension itself;
+      loading them is a local read, not a network request.
+    </p>
+
+    <h2>5. Data Sent to Third Parties</h2>
+    <p>
+      Data leaves your browser only in the two cases below. Both are initiated by you, and in both
+      cases the request goes directly from your browser to that company. Nothing passes through a
+      server controlled by us.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Recipient</th>
+          <th>What is sent</th>
+          <th>When it is sent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OpenAI<br /><code>api.openai.com</code></td>
+          <td>The text of your DJ command plus fixed instructions, and your OpenAI API key as an
+              Authorization header.</td>
+          <td>Only when you send an AI command or press "Test" while OpenAI is selected.</td>
+        </tr>
+        <tr>
+          <td>Anthropic<br /><code>api.anthropic.com</code></td>
+          <td>The text of your DJ command plus fixed instructions, and your Anthropic API key as a
+              request header.</td>
+          <td>Only when you send an AI command or press "Test" while Anthropic is selected.</td>
+        </tr>
+        <tr>
+          <td>Google (Gemini)<br /><code>generativelanguage.googleapis.com</code></td>
+          <td>The text of your DJ command plus fixed instructions, and your Google API key as a
+              request header.</td>
+          <td>Only when you send an AI command or press "Test" while Google is selected.</td>
+        </tr>
+        <tr>
+          <td>Gumroad<br /><code>api.gumroad.com</code></td>
+          <td>Your Premium license key and the product identifier, to confirm the purchase is valid.</td>
+          <td>Only when you save a license key, or when the AI assistant re-checks an existing key.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>What is never included in an AI request:</strong> the page URL, video title, video ID,
+      captions, page content, browsing history, your audio, or your settings. Only the command text you
+      typed and a short fixed instruction block are sent. Only the one provider you selected is
+      contacted — there is no automatic fallback to another provider and no escalation to a more
+      expensive model.
+    </p>
+    <p>
+      Those companies process the request under their own terms and privacy policies, which we do not
+      control. Their API usage is billed to your own account, separately from any Premium purchase.
+      Avoid typing personal or sensitive information into the AI command box, since that text is sent
+      to the provider you chose.
+    </p>
+
+    <h2>6. Information We Do Not Collect</h2>
+    <ul>
+      <li>No name, email address, phone number, or postal address.</li>
+      <li>No account, profile, or identifier that we could associate with you.</li>
+      <li>No browsing history, visited URLs, search terms, or page contents.</li>
+      <li>No analytics, telemetry, crash reporting, or usage statistics.</li>
+      <li>No advertising, ad identifiers, or third-party trackers.</li>
+      <li>No cookies set by the extension.</li>
+      <li>No audio, video, screenshots, microphone, camera, or location data.</li>
+      <li>No financial, health, government ID, or authentication credentials — other than the API keys
+          and license key you voluntarily enter, which stay on your device.</li>
+    </ul>
+
+    <h2>7. Permissions and Why They Are Needed</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>activeTab</code></td>
+          <td>Lets the popup talk to the tab you opened it on, so the controls and AI commands can be
+              applied to that video.</td>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Saves your settings, presets, API keys, and license status locally on your device.</td>
+        </tr>
+        <tr>
+          <td><code>https://www.youtube.com/*</code><br />
+              <code>https://youtube.com/*</code><br />
+              <code>https://m.youtube.com/*</code></td>
+          <td>Required for the extension to run its controls on YouTube video pages only.</td>
+        </tr>
+        <tr>
+          <td><code>https://api.openai.com/*</code><br />
+              <code>https://api.anthropic.com/*</code><br />
+              <code>https://generativelanguage.googleapis.com/*</code></td>
+          <td>Allows the background worker to reach the AI provider you selected when you send a
+              command. No other hosts are contacted.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      The extension requests no permission for microphone, camera, screen recording, tab capturing,
+      downloads, clipboard, bookmarks, history, or notifications.
+    </p>
+
+    <h2>8. Data Sharing and Sale</h2>
+    <p>
+      We do not sell, rent, trade, or otherwise share your data. We have no data to share: we never
+      receive it. The only outbound transfers are the user-initiated requests in Section 5, sent
+      directly by your browser to the provider or payment platform you chose to use.
+    </p>
+
+    <h2>9. Data Retention and Deletion</h2>
+    <p>
+      We retain nothing, because nothing reaches us. Locally stored data remains on your device until
+      you remove it:
+    </p>
+    <ul>
+      <li>Clear individual items (for example an API key or license key) from the extension's settings
+          panel.</li>
+      <li>Use the extension's reset option to restore default audio settings.</li>
+      <li>Uninstall the extension from <code>chrome://extensions</code> to delete all of its stored data.</li>
+      <li>Clearing your Chrome browsing data for "hosted app data" also removes extension storage.</li>
+    </ul>
+    <p>
+      Requests already delivered to an AI provider or to Gumroad are governed by that company's
+      retention policy; contact them directly to exercise rights over that data.
+    </p>
+
+    <h2>10. Security</h2>
+    <p>
+      We reduce risk by keeping the design minimal: no server, no account, no analytics, and no audio
+      upload. Network requests are made to fixed HTTPS endpoints over TLS. The extension does not
+      execute remote code and loads only files packaged inside the extension.
+    </p>
+    <p>
+      No method of storage or transmission is perfectly secure. Because your keys are stored unencrypted
+      in local extension storage, protect your device and browser profile, and revoke any key you believe
+      has been exposed.
+    </p>
+
+    <h2>11. Children's Privacy</h2>
+    <p>
+      The extension is not directed at children under 13. We do not knowingly collect any information
+      from anyone, including children. If you believe a child has entered personal information into an AI
+      command, delete that conversation from the provider's account and remove the stored API key from
+      the extension.
+    </p>
+
+    <h2>12. Your Choices and Rights</h2>
+    <ul>
+      <li><strong>AI is optional.</strong> Every manual control works without any API key or AI provider.</li>
+      <li><strong>You choose the provider.</strong> Only the provider selected in the settings is contacted.</li>
+      <li><strong>You can use your own key or none at all.</strong> Keys can be deleted at any time.</li>
+      <li><strong>Local data is under your control</strong> and can be erased by uninstalling the extension.</li>
+    </ul>
+
+    <h2>13. International Users</h2>
+    <p>
+      Because we do not collect or receive data, there is no international transfer of data to us. When
+      you send an AI command or verify a license, your browser transmits that request to the relevant
+      company, which may process it in any country where it operates.
+    </p>
+
+    <h2>14. Changes to This Policy</h2>
+    <p>
+      If the extension's data practices change — for example, if support for additional sites or a new
+      third-party service is added — this policy will be updated and the "Last updated" date above will
+      change. Material changes will also be described in the extension's update notes.
+    </p>
+
+    <h2>15. Contact</h2>
+    <p>
+      Questions about this privacy policy or the extension's data practices:<br />
       📩 <a href="mailto:sujith81159@gmail.com">sujith81159@gmail.com</a>
     </p>
   </main>
 
   <footer>
-    &copy; <span id="year"></span> AI-Powered DJ Extension. All rights reserved.
+    &copy; 2026 AI-Powered DJ Extension. All rights reserved.
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('date').textContent = new Date().toLocaleDateString();
-  </script>
 </body>
 </html>
